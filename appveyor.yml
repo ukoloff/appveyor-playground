@@ -8,14 +8,14 @@ environment:
     - NOV: 0
 
 platform:
-  - x86
   - x64
+  - x86
 
 cache:
   - node_modules
 
 install:
-  - ps: Install-Product node $env:NOV
+  - ps: Install-Product node $env:NOV $env:PLATFORM
   - node -v
   - npm -v
   - npm install
