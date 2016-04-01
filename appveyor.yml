@@ -1,4 +1,4 @@
-env:
+environment:
   matrix:
     - RUV: 193
     - RUV: 200
