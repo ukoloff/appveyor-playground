@@ -1,9 +1,9 @@
 environment:
   matrix:
-    - RUV: 193
-    - RUV: 200
-    - RUV: 21
     - RUV: 22
+    - RUV: 21
+    - RUV: 200
+    - RUV: 193
 
 install:
   # by default, all script lines are interpreted as batch
@@ -20,4 +20,4 @@ test_script:
   - ruby -v
   - gem -v
   - bundle -v
-  - gem install openssl-win-root
+  - bundle
