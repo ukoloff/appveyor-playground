@@ -1,3 +1,5 @@
+version: 1.0.{build}-{branch}
+
 environment:
   matrix:
     - NOV: 5

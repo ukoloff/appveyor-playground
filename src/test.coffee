@@ -2,7 +2,7 @@ withOut = require 'withOut'
 
 console.log do withOut ->
   s = "Hello, world!"
-  (tag '!DOCTYPE', false) html: true
+  (tag '!DOCTYPE', true) html: true
   html ->
     head ->
       title s
