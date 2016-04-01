@@ -1,13 +1,19 @@
+environment:
+  matrix:
+    - NOV: 5
+    - NOV: 4
+    - NOV: 3
+    - NOV: 2
+    - NOV: 1
+    - NOV: 0
+
 install:
-  # by default, all script lines are interpreted as batch
-  - echo This is batch
-  # to run script as a PowerShell command prepend it with ps:
-  - ps: Write-Host 'This is PowerShell'
-  - ps: Install-Product node ''
-  - set
+  - ps: Install-Product node $env:NOV
+  - node -v
+  - npm -v
+  - npm install
 
 build: off
 
 test_script:
-  - node -v
-  - npm -v
+  - npm test
