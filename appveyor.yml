@@ -1,11 +1,22 @@
+env:
+  matrix:
+    - RUV: 193
+    - RUV: 200
+    - RUV: 21
+    - RUV: 22
+
 install:
   # by default, all script lines are interpreted as batch
   - echo This is batch
   # to run script as a PowerShell command prepend it with ps:
   - ps: Write-Host 'This is PowerShell'
+  - ps: Install-Product node ''
+  - SET PATH="C:/Ruby%RV%/bin;%PATH%"
 
 build: off
 
 test_script:
-  - ruby -v
   - node -v
+  - ruby -v
+  - gem -v
+  - bundle -v
