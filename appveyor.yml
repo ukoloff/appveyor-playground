@@ -7,6 +7,13 @@ environment:
     - NOV: 1
     - NOV: 0
 
+platform:
+  - x86
+  - x64
+
+cache:
+  - node_modules
+
 install:
   - ps: Install-Product node $env:NOV
   - node -v
