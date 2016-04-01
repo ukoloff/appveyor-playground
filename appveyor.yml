@@ -12,7 +12,6 @@ install:
   - ps: Write-Host 'This is PowerShell'
   - ps: Install-Product node ''
   - set PATH=C:\Ruby%RUV%\bin;%PATH%
-  - set
 
 build: off
 
@@ -21,3 +20,4 @@ test_script:
   - ruby -v
   - gem -v
   - bundle -v
+  - gem install openssl-win-root
