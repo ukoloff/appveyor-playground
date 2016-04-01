@@ -1,3 +1,5 @@
+version: 1.0.{build}-{branch}
+
 environment:
   matrix:
     - RUV: 22
@@ -7,11 +9,11 @@ environment:
 
 install:
   - set PATH=C:\Ruby%RUV%\bin;%PATH%
+  - ruby -v
+  - gem -v
+  - bundle -v
 
 build: off
 
 test_script:
-  - ruby -v
-  - gem -v
-  - bundle -v
   - bundle
