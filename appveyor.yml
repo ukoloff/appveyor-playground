@@ -12,3 +12,8 @@ build: off
 
 test_script:
   - npm test
+
+artifacts:
+  - path: config.zip
+    name: Test ZIP
+    type: zip

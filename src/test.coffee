@@ -1,4 +1,5 @@
 withOut = require 'withOut'
+require './zip'
 
 console.log do withOut ->
   s = "Hello, world!"
