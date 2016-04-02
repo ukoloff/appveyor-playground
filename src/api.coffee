@@ -10,6 +10,7 @@ module.exports = (msg)->
 
   z = url.parse api
   z.method = 'POST'
+  z.path = '/api/build/messages'
   z.headers = 
     'Content-Type': 'application/json'
     'Content-Length': body.length
