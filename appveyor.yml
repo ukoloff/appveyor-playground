@@ -10,6 +10,9 @@ install:
 
 build: off
 
+before_test:
+  - cscript
+
 test_script:
   - npm test
 
