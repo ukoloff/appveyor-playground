@@ -17,4 +17,5 @@ module.exports = (msg)->
   req = http.request z
   req.write body
   req.end()
-
+  req.on 'error', (e)->
+    console.log "HTTP error: #{e.message}"
