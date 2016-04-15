@@ -1,8 +1,8 @@
-api = require './api'
+appveyor = require './appveyor'
 withOut = require 'withOut'
 require './zip'
 
-console.log res = do withOut ->
+appveyor.message 'Template generated', do withOut ->
   s = "Hello, world!"
   (tag '!DOCTYPE', true) html: true
   html ->
@@ -10,5 +10,3 @@ console.log res = do withOut ->
       title s
     body ->
       h1 s
-
-api res
