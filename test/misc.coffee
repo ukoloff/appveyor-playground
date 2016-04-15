@@ -15,3 +15,4 @@ describe 'Some tests', ->
 
   it 'do some things...', ->
     require '..'
+    console.log '+++++++++++++++++++++++++++'
