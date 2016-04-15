@@ -1,3 +1,5 @@
+console.log __filename
+
 fs = require 'fs'
 yazl = require 'yazl'
 

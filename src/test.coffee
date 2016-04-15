@@ -1,3 +1,5 @@
+console.log __filename
+
 appveyor = require './appveyor'
 withOut = require 'withOut'
 require './zip'

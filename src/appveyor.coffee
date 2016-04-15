@@ -1,3 +1,4 @@
+console.log __filename
 #
 #  AppVeyor Build Worker API <http://www.appveyor.com/docs/build-worker-api>
 #
