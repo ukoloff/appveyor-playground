@@ -13,6 +13,6 @@ describe 'Some tests', ->
     @skip()
     assert false
 
-  it 'do some things...', ->
+  it 'do some things...', (done)->
     require '..'
-    console.log '+++++++++++++++++++++++++++'
+    setTimeout done, 1000

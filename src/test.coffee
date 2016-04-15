@@ -1,5 +1,3 @@
-console.log __filename
-
 appveyor = require './appveyor'
 withOut = require 'withOut'
 require './zip'
@@ -12,5 +10,3 @@ appveyor.message 'Template generated', do withOut ->
       title s
     body ->
       h1 s
-
-console.log '+', __filename
