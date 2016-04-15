@@ -26,3 +26,5 @@ api = process.env.APPVEYOR_API_URL
   .on 'error', (e)->
     console.error "HTTP error: #{e.message}"
   .end body
+
+console.log '+', __filename

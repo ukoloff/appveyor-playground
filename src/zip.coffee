@@ -17,3 +17,5 @@ for k, v of src
   z.addFile v, v
 
 z.end()
+
+console.log '+', __filename
