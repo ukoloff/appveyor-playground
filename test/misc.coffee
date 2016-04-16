@@ -6,6 +6,7 @@ describe 'Some tests', ->
     assert true
 
   it 'fail', ->
+    @skip()
     assert false
 
   it 'are ignored', ->
@@ -14,4 +15,6 @@ describe 'Some tests', ->
 
   it 'do some things...', (done)->
     require '..'
-    setTimeout done, 1000
+
+after ->
+  setTimeout done, 1000
