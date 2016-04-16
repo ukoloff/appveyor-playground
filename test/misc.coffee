@@ -13,8 +13,8 @@ describe 'Some tests', ->
     @skip()
     assert false
 
-  it 'do some things...', (done)->
+  it 'do some things...', ->
     require '..'
 
-after ->
+after (done)->
   setTimeout done, 1000
