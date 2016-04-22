@@ -15,6 +15,3 @@ describe 'Some tests', ->
 
   it 'do some things...', ->
     require '..'
-
-after (done)->
-  setTimeout done, 1000
