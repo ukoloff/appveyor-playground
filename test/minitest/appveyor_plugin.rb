@@ -18,8 +18,5 @@ module Minitest
         StdOut: YAML.dump('assertions'=>result.assertions, 'failures'=>result.failures.length)
     end
 
-    def report
-      puts "results=#{@results.to_json}"
-    end
   end
 end
