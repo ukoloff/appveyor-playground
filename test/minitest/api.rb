@@ -29,14 +29,6 @@ module AppVeyor
       x.use_ssl='https'==z.scheme
       x
     end
-
-    def self.skip!
-      unless @skipped
-        @skipped = true
-        puts "AppVeyor Build Worker API not found!"
-      end
-      nil
-    end
-
+    
   end
 end

@@ -12,7 +12,7 @@ module Minitest
     end
 
     def report
-      puts "results=#{@results.map &:to_s}"
+      puts "results=#{@results.to_json}"
     end
   end
 end
