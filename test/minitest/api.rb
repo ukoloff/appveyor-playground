@@ -11,7 +11,7 @@ module AppVeyor
         details: details
       x.post '/api/build/messages',
         body,
-        'Content-Length'=>body.length,
+        'Content-Length'=>body.length.to_s,
         'Content-Type'=>'application/json'
     end
 
@@ -29,6 +29,6 @@ module AppVeyor
       x.use_ssl='https'==z.scheme
       x
     end
-    
+
   end
 end
