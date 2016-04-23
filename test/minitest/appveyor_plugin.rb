@@ -14,8 +14,8 @@ module Minitest
         fileName: result.class.name,
         outcome: result.skipped? ? 'Ignored' : result.passed? ? 'Passed' : 'Failed',
         durationMilliseconds: result.time,
-        ErrorStackTrace: (result.failure.backtrace rescue nil),
-        StdOut: YAML.dump('assertions'=>result.assertions, 'failures'=>result.failures)
+        ErrorStackTrace: (result.failure.backtrace * "\n" rescue nil),
+        StdOut: YAML.dump('assertions'=>result.assertions, 'failures'=>result.failures.length)
     end
 
     def report
