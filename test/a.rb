@@ -2,6 +2,7 @@ class TestA < Minitest::Test
 
    def test_a
      assert true
+     AppVeyor::Worker.message "I'm #{name}", "Some info..."
    end
 
    def test_b

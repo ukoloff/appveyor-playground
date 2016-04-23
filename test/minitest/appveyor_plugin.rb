@@ -1,3 +1,5 @@
+require_relative 'api'
+
 module Minitest
   def self.plugin_appveyor_init options
     self.reporter << AppVeyor.new
