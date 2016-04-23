@@ -15,6 +15,15 @@ module AppVeyor
         'Content-Type'=>'application/json'
     end
 
+    def self.test info
+      x = api or return
+      body = JSON.generate info
+      x.post '/api/tests',
+        body,
+        'Content-Length'=>body.length.to_s,
+        'Content-Type'=>'application/json'
+    end
+
     private
 
     def self.api

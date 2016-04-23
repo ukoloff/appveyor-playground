@@ -8,7 +8,11 @@ module Minitest
   class AppVeyor < AbstractReporter
 
     def record result
-      (@results||=[]).push result
+      ::AppVeyor::Worker.test testFramework: 'Mocha',
+        testName: result.name,
+        outcome: result.skipped? ? 'Ignored' : result.passed? ? 'Passed' : 'Failed',
+        durationMilliseconds: result.time
+
     end
 
     def report
