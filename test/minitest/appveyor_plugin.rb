@@ -1,3 +1,4 @@
+require 'yaml'
 require_relative 'api'
 
 module Minitest
@@ -10,9 +11,11 @@ module Minitest
     def record result
       ::AppVeyor::Worker.test testFramework: 'Mocha',
         testName: result.name,
+        fileName: result.class.name,
         outcome: result.skipped? ? 'Ignored' : result.passed? ? 'Passed' : 'Failed',
-        durationMilliseconds: result.time
-
+        durationMilliseconds: result.time,
+        ErrorStackTrace: (result.failure.backtrace rescue nil),
+        StdOut: YAML.dump('assertions'=>result.assertions, 'failures'=>result.failures)
     end
 
     def report
