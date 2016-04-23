@@ -5,7 +5,7 @@ cache:
 
 environment:
   matrix:
-    - RUV: 23
+    # - RUV: 23
     - RUV: 22
     - RUV: 21
     - RUV: 200
@@ -21,4 +21,4 @@ install:
 build: off
 
 test_script:
-  - rake
+  - bundle exec rake
