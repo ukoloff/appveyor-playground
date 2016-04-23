@@ -5,6 +5,7 @@ cache:
 
 environment:
   matrix:
+    - RUV: 23
     - RUV: 22
     - RUV: 21
     - RUV: 200
