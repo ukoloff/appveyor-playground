@@ -4,6 +4,10 @@ require 'net/http'
 module AppVeyor
   module Worker
 
+    def self.skip?
+      !api
+    end
+
     def self.message msg, details=nil
       x = api or return
       body = JSON.generate category: 'info',

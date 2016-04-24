@@ -3,7 +3,7 @@ require_relative 'api'
 
 module Minitest
   def self.plugin_appveyor_init options
-    self.reporter << AppVeyor.new
+    self.reporter << AppVeyor.new unless ::AppVeyor::Worker.skip?
   end
 
   class AppVeyor < AbstractReporter
